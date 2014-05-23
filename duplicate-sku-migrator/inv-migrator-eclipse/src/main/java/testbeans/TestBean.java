@@ -1,14 +1,15 @@
 package testbeans;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
 @Named
-@ApplicationScoped
+@javax.faces.view.ViewScoped
 public class TestBean {
 
+	int i = 0;
+
 	public String getMessage() {
-		return "Hello Darling";
+		return "[" + i++ + "] Hello Darling";
 	}
-	
+
 }
